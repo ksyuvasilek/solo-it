@@ -3,22 +3,20 @@ import { TuiRootModule, TuiDialogModule, TuiAlertModule, TUI_SANITIZER } from "@
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TuiInputEmail } from "src/components/emailInput/emailInput.component";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, TuiInputEmail
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
       BrowserAnimationsModule,
       TuiRootModule,
       TuiDialogModule,
       TuiAlertModule
-],
+  ],
   providers: [{provide: TUI_SANITIZER, useClass: NgDompurifySanitizer}],
   bootstrap: [AppComponent]
 })
